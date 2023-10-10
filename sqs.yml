@@ -1,0 +1,15 @@
+Resources:
+  # https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html
+  SQSQueue:
+    Type: AWS::SQS::Queue
+    Properties: 
+      ContentBasedDeduplication: True
+      DelaySeconds: 100
+      FifoQueue: No
+      KmsDataKeyReusePeriodSeconds: 100
+      #KmsMasterKeyId: String
+      MaximumMessageSize: 1024
+      MessageRetentionPeriod: 1209600
+      QueueName: Maruthi-sqs
+      ReceiveMessageWaitTimeSeconds: 20
+     
